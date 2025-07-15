@@ -1,84 +1,221 @@
 
+# --- CSV DATA ---
+csv_data = """Player,Span,Mat,Inns,Balls,Overs,Mdns,Runs,Wkts,BBI,Ave,Econ,SR,4,5,10
+M Muralidaran (ICC/SL),1992-2010,133,230,44039,7339.5,1794,18180,800,9/51,22.72,2.47,55.04,45,67,22
+SK Warne (AUS),1992-2007,145,273,40705,6784.1,1761,17995,708,8/71,25.41,2.65,57.49,48,37,10
+JM Anderson (ENG),2003-2024,188,350,40037,6672.5,1730,18627,704,7/42,26.45,2.79,56.87,32,32,3
+A Kumble (IND),1990-2008,132,236,40850,6808.2,1576,18355,619,10/74,29.65,2.69,65.99,31,35,8
+SCJ Broad (ENG),2007-2023,167,309,33698,5616.2,1304,16719,604,8/15,27.68,2.97,55.79,28,20,3
+GD McGrath (AUS),1993-2007,124,243,29248,4874.4,1470,12186,563,8/24,21.64,2.49,51.95,28,29,3
+NM Lyon (AUS),2011-2025,139,259,34502,5750.2,1089,16942,562,8/50,30.14,2.94,61.39,26,24,5
+R Ashwin (IND),2011-2024,106,200,27246,4541.0,907,12891,537,7/59,24.00,2.83,50.73,25,37,8
+CA Walsh (WI),1984-2001,132,242,30019,5003.1,1144,12688,519,7/37,24.44,2.53,57.84,32,22,3
+DW Steyn (SA),2004-2019,93,171,18608,3101.2,660,10077,439,7/51,22.95,3.24,42.38,27,26,5
+N Kapil Dev (IND),1978-1994,131,227,27740,4623.2,1060,12867,434,9/83,29.64,2.78,63.91,17,23,2
+HMRKB Herath (SL),1999-2018,93,170,25993,4332.1,814,12157,433,9/127,28.07,2.80,60.03,20,34,9
+Sir RJ Hadlee (NZ),1973-1990,86,150,21918,-,809,9611,431,9/52,22.29,2.63,50.85,25,36,9
+SM Pollock (SA),1995-2008,108,202,24353,4058.5,1222,9733,421,7/87,23.11,2.39,57.84,23,16,1
+Harbhajan Singh (IND),1998-2015,103,190,28580,4763.2,871,13537,417,8/84,32.46,2.84,68.53,16,25,5
+Wasim Akram (PAK),1985-2002,104,181,22627,3771.1,871,9779,414,7/119,23.62,2.59,54.65,20,25,5
+CEL Ambrose (WI),1988-2000,98,179,22103,3683.5,1001,8501,405,8/45,20.99,2.30,54.57,21,22,3
+MA Starc (AUS),2011-2025,100,192,19094,3182.2,606,10863,402,6/9,27.02,3.41,47.49,20,16,2
+TG Southee (NZ),2008-2024,107,203,23490,3915.0,889,11832,391,7/64,30.26,3.02,60.07,19,15,1
+M Ntini (SA),1998-2009,101,190,20834,3472.2,759,11242,390,7/37,28.82,3.23,53.42,19,18,4
+IT Botham (ENG),1977-1992,102,168,21815,-,788,10878,383,8/34,28.40,2.99,56.95,17,27,4
+MD Marshall (WI),1978-1991,81,151,17584,2930.4,614,7876,376,7/22,20.94,2.68,46.76,19,22,4
+Waqar Younis (PAK),1989-2003,87,154,16224,2704.0,516,8788,373,7/76,23.56,3.25,43.49,28,22,5
+Imran Khan (PAK),1971-1992,88,142,19458,-,727,8258,362,8/58,22.81,2.54,53.75,17,23,6
+DL Vettori (ICC/NZ),1997-2014,113,187,28814,4802.2,1197,12441,362,7/87,34.36,2.59,79.59,19,20,3
+DK Lillee (AUS),1971-1984,70,132,18467,-,652,8493,355,7/83,23.92,2.75,52.01,23,23,7
+WPUJC Vaas (SL),1994-2009,111,194,23438,3906.2,895,10501,355,7/71,29.58,2.68,66.02,20,12,2
+K Rabada (SA),2015-2025,71,130,13100,2183.2,433,7306,336,7/112,21.74,3.34,38.98,15,17,4
+AA Donald (SA),1992-2002,72,129,15519,2586.3,661,7344,330,8/71,22.25,2.83,47.02,11,20,3
+RA Jadeja (IND),2012-2025,83,156,19067,3177.5,742,8129,326,7/42,24.93,2.55,58.48,13,15,3
+RGD Willis (ENG),1971-1984,90,165,17357,-,554,8190,325,8/43,25.20,2.83,53.40,12,16,0
+TA Boult (NZ),2011-2022,78,149,17417,2902.5,656,8717,317,6/30,27.49,3.00,54.94,18,10,1
+MG Johnson (AUS),2007-2015,73,140,16001,2666.5,514,8891,313,8/61,28.40,3.33,51.12,16,12,3
+I Sharma (IND),2007-2021,105,188,19160,3193.2,640,10078,311,7/74,32.40,3.15,61.60,10,11,1
+Z Khan (IND),2000-2014,92,165,18785,3130.5,624,10247,311,7/87,32.94,3.27,60.40,15,11,1
+B Lee (AUS),1999-2008,76,150,16531,2755.1,547,9554,310,5/30,30.81,3.46,53.32,17,10,0
+PJ Cummins (AUS),2011-2025,71,132,14187,2364.3,514,6829,309,6/23,22.10,2.88,45.91,17,14,2
+M Morkel (SA),2006-2018,86,160,16498,2749.4,605,8550,309,6/23,27.66,3.10,53.39,18,8,0
+LR Gibbs (WI),1958-1976,79,148,27115,-,1313,8989,309,8/38,29.09,1.98,87.75,11,18,2
+FS Trueman (ENG),1952-1965,67,127,15178,-,522,6625,307,8/31,21.57,2.61,49.43,19,17,3
+DL Underwood (ENG),1966-1982,86,151,21862,-,1239,7674,297,8/51,25.83,2.10,73.60,13,17,6
+JR Hazlewood (AUS),2014-2025,76,143,15423,2570.3,657,7144,295,6/67,24.21,2.77,52.28,11,13,0
+JH Kallis (ICC/SA),1995-2013,166,272,20232,3372.0,848,9535,292,6/54,32.65,2.82,69.28,7,5,0
+CJ McDermott (AUS),1984-1996,71,124,16586,2764.2,579,8332,291,8/97,28.63,3.01,56.99,17,14,2
+KAJ Roach (WI),2009-2025,85,154,14944,2490.4,540,7729,284,6/48,27.21,3.10,52.61,14,11,1
+BS Bedi (IND),1966-1979,67,118,21364,-,1096,7637,266,7/98,28.71,2.14,80.31,13,14,1
+Danish Kaneria (PAK),2000-2010,61,112,17697,2949.3,517,9082,261,7/77,34.79,3.07,67.80,8,15,2
+N Wagner (NZ),2012-2024,64,122,13725,2287.3,473,7169,260,7/39,27.57,3.13,52.78,13,9,0
+J Garner (WI),1977-1987,58,111,13169,2194.5,576,5433,259,6/56,20.97,2.47,50.84,18,7,0
+JN Gillespie (AUS),1996-2006,71,137,14234,2372.2,630,6770,259,7/37,26.13,2.85,54.95,8,8,0
+GP Swann (ENG),2008-2013,60,109,15349,2558.1,493,7642,255,6/65,29.96,2.98,60.19,14,17,3
+JB Statham (ENG),1951-1965,70,129,16056,-,595,6261,252,7/39,24.84,2.33,63.71,9,9,1
+MA Holding (WI),1975-1987,60,113,12680,-,459,5898,249,8/92,23.68,2.79,50.92,11,13,2
+R Benaud (AUS),1952-1964,63,116,19108,-,805,6704,248,7/72,27.03,2.10,77.04,16,16,1
+MJ Hoggard (ENG),2000-2008,67,122,13909,2318.1,493,7564,248,7/61,30.50,3.26,56.08,13,7,1
+GD McKenzie (AUS),1961-1971,60,113,17681,-,547,7328,246,8/71,29.78,2.48,71.87,7,16,3
+Shakib Al Hasan (BAN),2007-2024,71,121,15675,2612.3,486,7804,246,7/36,31.72,2.98,63.71,11,19,2
+Yasir Shah (PAK),2014-2022,48,89,14255,2375.5,359,7657,244,8/41,31.38,3.22,58.42,15,16,3
+BS Chandrasekhar (IND),1964-1979,58,97,15963,-,584,7199,242,8/79,29.74,2.70,65.96,12,16,2
+Taijul Islam (BAN),2014-2025,55,98,14585,2430.5,425,7423,237,8/39,31.32,3.05,61.54,12,17,2
+AV Bedser (ENG),1946-1955,51,92,15918,-,574,5876,236,7/44,24.89,2.21,67.44,11,15,5
+J Srinath (IND),1991-2002,67,121,15104,2517.2,599,7196,236,8/86,30.49,2.85,64.00,8,10,1
+Abdul Qadir (PAK),1977-1990,67,111,17126,-,608,7742,236,9/56,32.80,2.71,72.56,12,15,5
+GS Sobers (WI),1954-1974,93,159,21599,-,974,7999,235,6/73,34.03,2.22,91.91,8,6,0
+AR Caddick (ENG),1993-2003,62,105,13558,2259.4,501,6999,234,7/46,29.91,3.09,57.94,9,13,1
+CS Martin (NZ),2000-2013,71,126,14026,2337.4,486,7878,233,6/26,33.81,3.37,60.19,10,10,1
+Mohammed Shami (IND),2013-2023,64,122,11515,1919.1,364,6346,229,6/56,27.71,3.30,50.28,12,6,0
+D Gough (ENG),1994-2003,58,95,11821,1970.1,369,6503,229,6/42,28.39,3.30,51.62,14,9,0
+RR Lindwall (AUS),1946-1960,61,113,13650,-,419,5251,228,7/38,23.03,2.30,59.86,8,12,0
+SJ Harmison (ENG/ICC),2002-2009,63,115,13375,2229.1,431,7192,226,7/12,31.82,3.22,59.18,11,8,1
+A Flintoff (ENG/ICC),1998-2009,79,137,14951,2491.5,507,7410,226,5/58,32.78,2.97,66.15,11,3,0
+VD Philander (SA),2011-2020,64,119,11391,1898.3,507,5000,224,6/21,22.32,2.63,50.85,8,13,2
+BA Stokes (ENG),2013-2025,114,168,12950,2158.2,374,7173,224,6/22,32.02,3.32,57.81,9,4,0
+PM Siddle (AUS),2008-2019,67,126,13907,2317.5,615,6777,221,6/54,30.66,2.92,62.92,8,8,0
+CL Cairns (NZ),1989-2004,62,104,11698,1949.4,414,6410,218,7/27,29.40,3.28,53.66,11,13,1
+JJ Bumrah (IND),2018-2025,47,90,9150,1525.0,361,4229,217,6/27,19.48,2.77,42.16,7,15,0
+CV Grimmett (AUS),1925-1936,37,67,14513,-,736,5231,216,7/40,24.21,2.16,67.18,7,21,7
+HH Streak (ZIM),1993-2005,65,102,13559,2259.5,595,6079,216,6/73,28.14,2.69,62.77,16,7,0
+MG Hughes (AUS),1985-1994,53,97,12285,2047.3,499,6017,212,8/87,28.38,2.93,57.94,14,7,1
+SCG MacGill (AUS),1998-2008,44,85,11237,1872.5,365,6038,208,8/108,29.02,3.22,54.02,9,12,2
+Saqlain Mushtaq (PAK),1995-2004,49,86,14070,2345.0,541,6206,208,8/164,29.83,2.64,67.64,12,13,3
+Mehidy Hasan Miraz (BAN),2016-2025,54,94,12696,2116.0,328,6635,205,7/58,32.36,3.13,61.93,9,13,3
+MM Ali (ENG),2014-2023,68,119,12610,2101.4,293,7612,204,6/53,37.31,3.62,61.81,13,5,1
+KA Maharaj (SA),2016-2025,59,100,11666,1944.2,367,6055,203,9/129,29.82,3.11,57.46,6,11,1
+AME Roberts (WI),1974-1983,47,90,11135,-,382,5174,202,7/54,25.61,2.78,55.12,8,11,2
+JA Snow (ENG),1965-1976,49,93,12021,-,415,5387,202,7/40,26.66,2.68,59.50,12,8,1
+JR Thomson (AUS),1972-1985,51,90,10535,-,301,5601,200,6/46,28.00,3.18,52.67,16,8,0
+"""
+
+# --- Imports ---
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import StandardScaler
+from sklearn.cluster import KMeans
 from io import StringIO
 
-# Test match bowling dataset (source: Cricinfo, see script comments)
-data_str = '''Player\tSpan\tMat\tInns\tBalls\tOvers\tMdns\tRuns\tWkts\tBBI\tAve\tEcon\tSR\t4\t5\t10
-M Muralidaran (ICC/SL)\t1992-2010\t133\t230\t44039\t7339.5\t1794\t18180\t800\t9/51\t22.72\t2.47\t55.04\t45\t67\t22
-SK Warne (AUS)\t1992-2007\t145\t273\t40705\t6784.1\t1761\t17995\t708\t8/71\t25.41\t2.65\t57.49\t48\t37\t10
-JM Anderson (ENG)\t2003-2024\t188\t350\t40037\t6672.5\t1730\t18627\t704\t7/42\t26.45\t2.79\t56.87\t32\t32\t3
-A Kumble (IND)\t1990-2008\t132\t236\t40850\t6808.2\t1576\t18355\t619\t10/74\t29.65\t2.69\t65.99\t31\t35\t8
-SCJ Broad (ENG)\t2007-2023\t167\t309\t33698\t5616.2\t1304\t16719\t604\t8/15\t27.68\t2.97\t55.79\t28\t20\t3
-GD McGrath (AUS)\t1993-2007\t124\t243\t29248\t4874.4\t1470\t12186\t563\t8/24\t21.64\t2.49\t51.95\t28\t29\t3
-NM Lyon (AUS)\t2011-2025\t139\t259\t34502\t5750.2\t1089\t16942\t562\t8/50\t30.14\t2.94\t61.39\t26\t24\t5
-R Ashwin (IND)\t2011-2024\t106\t200\t27246\t4541.0\t907\t12891\t537\t7/59\t24.00\t2.83\t50.73\t25\t37\t8
-CA Walsh (WI)\t1984-2001\t132\t242\t30019\t5003.1\t1144\t12688\t519\t7/37\t24.44\t2.53\t57.84\t32\t22\t3
-DW Steyn (SA)\t2004-2019\t93\t171\t18608\t3101.2\t660\t10077\t439\t7/51\t22.95\t3.24\t42.38\t27\t26\t5
-N Kapil Dev (IND)\t1978-1994\t131\t227\t27740\t4623.2\t1060\t12867\t434\t9/83\t29.64\t2.78\t63.91\t17\t23\t2
-HMRKB Herath (SL)\t1999-2018\t93\t170\t25993\t4332.1\t814\t12157\t433\t9/127\t28.07\t2.80\t60.03\t20\t34\t9
-Sir RJ Hadlee (NZ)\t1973-1990\t86\t150\t21918\t-\t809\t9611\t431\t9/52\t22.29\t2.63\t50.85\t25\t36\t9
-SM Pollock (SA)\t1995-2008\t108\t202\t24353\t4058.5\t1222\t9733\t421\t7/87\t23.11\t2.39\t57.84\t23\t16\t1
-Harbhajan Singh (IND)\t1998-2015\t103\t190\t28580\t4763.2\t871\t13537\t417\t8/84\t32.46\t2.84\t68.53\t16\t25\t5
-Wasim Akram (PAK)\t1985-2002\t104\t181\t22627\t3771.1\t871\t9779\t414\t7/119\t23.62\t2.59\t54.65\t20\t25\t5
-CEL Ambrose (WI)\t1988-2000\t98\t179\t22103\t3683.5\t1001\t8501\t405\t8/45\t20.99\t2.30\t54.57\t21\t22\t3
-MA Starc (AUS)\t2011-2025\t100\t192\t19094\t3182.2\t606\t10863\t402\t6/9\t27.02\t3.41\t47.49\t20\t16\t2
-TG Southee (NZ)\t2008-2024\t107\t203\t23490\t3915.0\t889\t11832\t391\t7/64\t30.26\t3.02\t60.07\t19\t15\t1
-M Ntini (SA)\t1998-2009\t101\t190\t20834\t3472.2\t759\t11242\t390\t7/37\t28.82\t3.23\t53.42\t19\t18\t4
-IT Botham (ENG)\t1977-1992\t102\t168\t21815\t-\t788\t10878\t383\t8/34\t28.40\t2.99\t56.95\t17\t27\t4
-MD Marshall (WI)\t1978-1991\t81\t151\t17584\t2930.4\t614\t7876\t376\t7/22\t20.94\t2.68\t46.76\t19\t22\t4
-Waqar Younis (PAK)\t1989-2003\t87\t154\t16224\t2704.0\t516\t8788\t373\t7/76\t23.56\t3.25\t43.49\t28\t22\t5
-Imran Khan (PAK)\t1971-1992\t88\t142\t19458\t-\t727\t8258\t362\t8/58\t22.81\t2.54\t53.75\t17\t23\t6
-DL Vettori (ICC/NZ)\t1997-2014\t113\t187\t28814\t4802.2\t1197\t12441\t362\t7/87\t34.36\t2.59\t79.59\t19\t20\t3
-DK Lillee (AUS)\t1971-1984\t70\t132\t18467\t-\t652\t8493\t355\t7/83\t23.92\t2.75\t52.01\t23\t23\t7
-WPUJC Vaas (SL)\t1994-2009\t111\t194\t23438\t3906.2\t895\t10501\t355\t7/71\t29.58\t2.68\t66.02\t20\t12\t2
-K Rabada (SA)\t2015-2025\t71\t130\t13100\t2183.2\t433\t7306\t336\t7/112\t21.74\t3.34\t38.98\t15\t17\t4
-AA Donald (SA)\t1992-2002\t72\t129\t15519\t2586.3\t661\t7344\t330\t8/71\t22.25\t2.83\t47.02\t11\t20\t3
-RA Jadeja (IND)\t2012-2025\t83\t156\t19067\t3177.5\t742\t8129\t326\t7/42\t24.93\t2.55\t58.48\t13\t15\t3
-RGD Willis (ENG)\t1971-1984\t90\t165\t17357\t-\t554\t8190\t325\t8/43\t25.20\t2.83\t53.40\t12\t16\t-\nTA Boult (NZ)\t2011-2022\t78\t149\t17417\t2902.5\t656\t8717\t317\t6/30\t27.49\t3.00\t54.94\t18\t10\t1
-MG Johnson (AUS)\t2007-2015\t73\t140\t16001\t2666.5\t514\t8891\t313\t8/61\t28.40\t3.33\t51.12\t16\t12\t3
-I Sharma (IND)\t2007-2021\t105\t188\t19160\t3193.2\t640\t10078\t311\t7/74\t32.40\t3.15\t61.60\t10\t11\t1
-Z Khan (IND)\t2000-2014\t92\t165\t18785\t3130.5\t624\t10247\t311\t7/87\t32.94\t3.27\t60.40\t15\t11\t1
-B Lee (AUS)\t1999-2008\t76\t150\t16531\t2755.1\t547\t9554\t310\t5/30\t30.81\t3.46\t53.32\t17\t10\t-\nPJ Cummins (AUS)\t2011-2025\t71\t132\t14187\t2364.3\t514\t6829\t309\t6/23\t22.10\t2.88\t45.91\t17\t14\t2
-M Morkel (SA)\t2006-2018\t86\t160\t16498\t2749.4\t605\t8550\t309\t6/23\t27.66\t3.10\t53.39\t18\t8\t-\nLR Gibbs (WI)\t1958-1976\t79\t148\t27115\t-\t1313\t8989\t309\t8/38\t29.09\t1.98\t87.75\t11\t18\t2
-FS Trueman (ENG)\t1952-1965\t67\t127\t15178\t-\t522\t6625\t307\t8/31\t21.57\t2.61\t49.43\t19\t17\t3
-DL Underwood (ENG)\t1966-1982\t86\t151\t21862\t-\t1239\t7674\t297\t8/51\t25.83\t2.10\t73.60\t13\t17\t6
-JR Hazlewood (AUS)\t2014-2025\t76\t143\t15423\t2570.3\t657\t7144\t295\t6/67\t24.21\t2.77\t52.28\t11\t13\t-\nJH Kallis (ICC/SA)\t1995-2013\t166\t272\t20232\t3372.0\t848\t9535\t292\t6/54\t32.65\t2.82\t69.28\t7\t5\t-\nCJ McDermott (AUS)\t1984-1996\t71\t124\t16586\t2764.2\t579\t8332\t291\t8/97\t28.63\t3.01\t56.99\t17\t14\t2
-KAJ Roach (WI)\t2009-2025\t85\t154\t14944\t2490.4\t540\t7729\t284\t6/48\t27.21\t3.10\t52.61\t14\t11\t1
-BS Bedi (IND)\t1966-1979\t67\t118\t21364\t-\t1096\t7637\t266\t7/98\t28.71\t2.14\t80.31\t13\t14\t1
-Danish Kaneria (PAK)\t2000-2010\t61\t112\t17697\t2949.3\t517\t9082\t261\t7/77\t34.79\t3.07\t67.80\t8\t15\t2
-N Wagner (NZ)\t2012-2024\t64\t122\t13725\t2287.3\t473\t7169\t260\t7/39\t27.57\t3.13\t52.78\t13\t9\t-\nJ Garner (WI)\t1977-1987\t58\t111\t13169\t2194.5\t576\t5433\t259\t6/56\t20.97\t2.47\t50.84\t18\t7\t-\nJN Gillespie (AUS)\t1996-2006\t71\t137\t14234\t2372.2\t630\t6770\t259\t7/37\t26.13\t2.85\t54.95\t8\t8\t-\nGP Swann (ENG)\t2008-2013\t60\t109\t15349\t2558.1\t493\t7642\t255\t6/65\t29.96\t2.98\t60.19\t14\t17\t3
-JB Statham (ENG)\t1951-1965\t70\t129\t16056\t-\t595\t6261\t252\t7/39\t24.84\t2.33\t63.71\t9\t9\t1
-MA Holding (WI)\t1975-1987\t60\t113\t12680\t-\t459\t5898\t249\t8/92\t23.68\t2.79\t50.92\t11\t13\t2
-R Benaud (AUS)\t1952-1964\t63\t116\t19108\t-\t805\t6704\t248\t7/72\t27.03\t2.10\t77.04\t16\t16\t1
-MJ Hoggard (ENG)\t2000-2008\t67\t122\t13909\t2318.1\t493\t7564\t248\t7/61\t30.50\t3.26\t56.08\t13\t7\t1
-GD McKenzie (AUS)\t1961-1971\t60\t113\t17681\t-\t547\t7328\t246\t8/71\t29.78\t2.48\t71.87\t7\t16\t3
-Shakib Al Hasan (BAN)\t2007-2024\t71\t121\t15675\t2612.3\t486\t7804\t246\t7/36\t31.72\t2.98\t63.71\t11\t19\t2
-Yasir Shah (PAK)\t2014-2022\t48\t89\t14255\t2375.5\t359\t7657\t244\t8/41\t31.38\t3.22\t58.42\t15\t16\t3
-BS Chandrasekhar (IND)\t1964-1979\t58\t97\t15963\t-\t584\t7199\t242\t8/79\t29.74\t2.70\t65.96\t12\t16\t2
-Taijul Islam (BAN)\t2014-2025\t55\t98\t14585\t2430.5\t425\t7423\t237\t8/39\t31.32\t3.05\t61.54\t12\t17\t2
-AV Bedser (ENG)\t1946-1955\t51\t92\t15918\t-\t574\t5876\t236\t7/44\t24.89\t2.21\t67.44\t11\t15\t5
-J Srinath (IND)\t1991-2002\t67\t121\t15104\t2517.2\t599\t7196\t236\t8/86\t30.49\t2.85\t64.00\t8\t10\t1
-Abdul Qadir (PAK)\t1977-1990\t67\t111\t17126\t-\t608\t7742\t236\t9/56\t32.80\t2.71\t72.56\t12\t15\t5
-GS Sobers (WI)\t1954-1974\t93\t159\t21599\t-\t974\t7999\t235\t6/73\t34.03\t2.22\t91.91\t8\t6\t-\nAR Caddick (ENG)\t1993-2003\t62\t105\t13558\t2259.4\t501\t6999\t234\t7/46\t29.91\t3.09\t57.94\t9\t13\t1
-CS Martin (NZ)\t2000-2013\t71\t126\t14026\t2337.4\t486\t7878\t233\t6/26\t33.81\t3.37\t60.19\t10\t10\t1
-Mohammed Shami (IND)\t2013-2023\t64\t122\t11515\t1919.1\t364\t6346\t229\t6/56\t27.71\t3.30\t50.28\t12\t6\t-\nD Gough (ENG)\t1994-2003\t58\t95\t11821\t1970.1\t369\t6503\t229\t6/42\t28.39\t3.30\t51.62\t14\t9\t-\nRR Lindwall (AUS)\t1946-1960\t61\t113\t13650\t-\t419\t5251\t228\t7/38\t23.03\t2.30\t59.86\t8\t12\t-\nSJ Harmison (ENG/ICC)\t2002-2009\t63\t115\t13375\t2229.1\t431\t7192\t226\t7/12\t31.82\t3.22\t59.18\t11\t8\t1
-A Flintoff (ENG/ICC)\t1998-2009\t79\t137\t14951\t2491.5\t507\t7410\t226\t5/58\t32.78\t2.97\t66.15\t11\t3\t-\nVD Philander (SA)\t2011-2020\t64\t119\t11391\t1898.3\t507\t5000\t224\t6/21\t22.32\t2.63\t50.85\t8\t13\t2
-BA Stokes (ENG)\t2013-2025\t114\t168\t12950\t2158.2\t374\t7173\t224\t6/22\t32.02\t3.32\t57.81\t9\t4\t-\nPM Siddle (AUS)\t2008-2019\t67\t126\t13907\t2317.5\t615\t6777\t221\t6/54\t30.66\t2.92\t62.92\t8\t8\t-\nCL Cairns (NZ)\t1989-2004\t62\t104\t11698\t1949.4\t414\t6410\t218\t7/27\t29.40\t3.28\t53.66\t11\t13\t1
-JJ Bumrah (IND)\t2018-2025\t47\t90\t9150\t1525.0\t361\t4229\t217\t6/27\t19.48\t2.77\t42.16\t7\t15\t-\nCV Grimmett (AUS)\t1925-1936\t37\t67\t14513\t-\t736\t5231\t216\t7/40\t24.21\t2.16\t67.18\t7\t21\t7
-HH Streak (ZIM)\t1993-2005\t65\t102\t13559\t2259.5\t595\t6079\t216\t6/73\t28.14\t2.69\t62.77\t16\t7\t-\nMG Hughes (AUS)\t1985-1994\t53\t97\t12285\t2047.3\t499\t6017\t212\t8/87\t28.38\t2.93\t57.94\t14\t7\t1
-SCG MacGill (AUS)\t1998-2008\t44\t85\t11237\t1872.5\t365\t6038\t208\t8/108\t29.02\t3.22\t54.02\t9\t12\t2
-Saqlain Mushtaq (PAK)\t1995-2004\t49\t86\t14070\t2345.0\t541\t6206\t208\t8/164\t29.83\t2.64\t67.64\t12\t13\t3
-Mehidy Hasan Miraz (BAN)\t2016-2025\t54\t94\t12696\t2116.0\t328\t6635\t205\t7/58\t32.36\t3.13\t61.93\t9\t13\t3
-MM Ali (ENG)\t2014-2023\t68\t119\t12610\t2101.4\t293\t7612\t204\t6/53\t37.31\t3.62\t61.81\t13\t5\t1
-KA Maharaj (SA)\t2016-2025\t59\t100\t11666\t1944.2\t367\t6055\t203\t9/129\t29.82\t3.11\t57.46\t6\t11\t1
-AME Roberts (WI)\t1974-1983\t47\t90\t11135\t-\t382\t5174\t202\t7/54\t25.61\t2.78\t55.12\t8\t11\t2
-JA Snow (ENG)\t1965-1976\t49\t93\t12021\t-\t415\t5387\t202\t7/40\t26.66\t2.68\t59.50\t12\t8\t1
-JR Thomson (AUS)\t1972-1985\t51\t90\t10535\t-\t301\t5601\t200\t6/46\t28.00\t3.18\t52.67\t16\t8\t-'''
+# Load into DataFrame
+data = pd.read_csv(StringIO(csv_data))
+data.rename(columns={'5': '5w', '10': '10w'}, inplace=True)
 
-# This dataset was taken from Cricinfo (espncricinfo.com), manually compiled for analysis purposes.
-data = pd.read_csv(StringIO(data_str), sep='\t')
+# Replace '-' in all numeric columns with 0
+for col in ['Overs', '4', '5w', '10w', 'Mat', 'Inns', 'Balls', 'Mdns', 'Runs', 'Wkts', 'Ave', 'Econ', 'SR']:
+    data[col] = data[col].replace('-', 0)
+
+numeric_cols = ['Mat', 'Inns', 'Balls', 'Overs', 'Mdns', 'Runs', 'Wkts', 'Ave', 'Econ', 'SR', '4', '5w', '10w']
+for col in numeric_cols:
+    data[col] = pd.to_numeric(data[col], errors='coerce')
+for col in ['4', '5w', '10w']:
+    data[col] = data[col].fillna(0)
+essential = ['Mat', 'Wkts', 'Ave', 'Econ', 'SR']
+data = data.dropna(subset=essential)
+
+# --- Feature Engineering ---
+data['WktsPerMatch'] = data['Wkts'] / data['Mat']
+
+def get_span_years(span):
+    try:
+        start, end = span.split('-')
+        return int(end) - int(start) + 1
+    except:
+        return np.nan
+
+data['SpanYears'] = data['Span'].apply(get_span_years)
+
+# --- Era Normalization ---
+era_bins = [0, 1919, 1929, 1939, 1949, 1959, 1969, 1979, 1989, 1999, 2009, 2019, 2100]
+era_labels = [
+    'pre1920', '1920s', '1930s', '1940s', '1950s', '1960s', '1970s',
+    '1980s', '1990s', '2000s', '2010s', '2020s'
+]
+era_avg = {
+    'pre1920': {'Ave': 25, 'Econ': 2.63},
+    '1920s':   {'Ave': 32, 'Econ': 2.63},
+    '1930s':   {'Ave': 35, 'Econ': 2.63},
+    '1940s':   {'Ave': 32, 'Econ': 2.28},
+    '1950s':   {'Ave': 28.5, 'Econ': 2.28},
+    '1960s':   {'Ave': 32, 'Econ': 2.49},
+    '1970s':   {'Ave': 32, 'Econ': 2.66},
+    '1980s':   {'Ave': 32, 'Econ': 2.85},
+    '1990s':   {'Ave': 31.5, 'Econ': 2.83},
+    '2000s':   {'Ave': 34.1, 'Econ': 3.08},
+    '2010s':   {'Ave': 33.85, 'Econ': 3.15},
+    '2020s':   {'Ave': 33.85, 'Econ': 3.22},
+}
+
+def get_era(span):
+    try:
+        start, end = span.split('-')
+        mid = (int(start) + int(end)) // 2
+        for i in range(len(era_bins)-1):
+            if era_bins[i] <= mid < era_bins[i+1]:
+                return era_labels[i]
+        return '2010s'
+    except:
+        return '2010s'
+
+data['Era'] = data['Span'].apply(get_era)
+data['AdjAvg'] = data.apply(lambda x: x['Ave'] / era_avg[x['Era']]['Ave'] if pd.notnull(x['Ave']) else np.nan, axis=1)
+data['AdjEcon'] = data.apply(lambda x: x['Econ'] / era_avg[x['Era']]['Econ'] if pd.notnull(x['Econ']) else np.nan, axis=1)
+
+# --- Scoring Parameters ---
+parameters = [
+    'AdjAvg',        # Adjusted bowling average
+    'SR',            # Strike rate
+    'AdjEcon',       # Adjusted economy rate
+    'WktsPerMatch',  # Wickets per match
+    '5w',            # 5-wicket hauls
+    '10w',           # 10-wicket hauls
+    'SpanYears'      # Career length
+]
+lower_better = ['AdjAvg', 'SR', 'AdjEcon']
+higher_better = ['WktsPerMatch', '5w', '10w', 'SpanYears']
+
+# --- Z-score Normalization ---
+scaler = StandardScaler()
+for col in parameters:
+    data[col] = pd.to_numeric(data[col], errors='coerce')
+data = data.dropna(subset=parameters)
+data_z = pd.DataFrame(scaler.fit_transform(data[parameters]), columns=parameters)
+for col in lower_better:
+    data_z[col] = -data_z[col]  # invert so that higher is better for all
+
+# --- Ideal Bowler Definition ---
+def top10_mean(col):
+    n = max(1, int(0.1 * len(data_z)))
+    return data_z[col].sort_values(ascending=False).head(n).mean()
+center = np.array([top10_mean(col) for col in data_z.columns])
+
+# --- Euclidean Distance Scoring ---
+def euclidean(row):
+    return np.linalg.norm(row.values - center)
+data['score'] = data_z.apply(euclidean, axis=1)
+
+# --- K-MEANS CLUSTERING OF BOWLERS ---
+N = len(data_z)
+n_clusters = max(2, int(np.sqrt(N)))
+kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
+data['cluster'] = kmeans.fit_predict(data_z)
+
+# --- Final Ranking (re-sort data after cluster assignment) ---
+best_bowlers = data.sort_values('score')
+
+# --- Output ---
+print("\nTop 10 bowlers and their cluster assignments:")
+print(best_bowlers[['Player', 'score', 'cluster'] + parameters].head(10))
+
+print(f"\nK-means cluster centers (z-score space, columns: {parameters}):")
+for i, center in enumerate(kmeans.cluster_centers_):
+    print(f"Cluster {i}: {center}")
+# --- View bowlers by cluster ---
+print("\n--- Bowlers by Cluster ---")
+for clus in sorted(data['cluster'].unique()):
+    print(f"\nCluster {clus} ({len(data[data['cluster'] == clus])} bowlers):")
+
+
 
 
 
@@ -114,104 +251,8 @@ data = pd.read_csv(StringIO(data_str), sep='\t')
 
 # --- Feature Engineering ---
 # Calculate wickets per match (strike power)
-data['WktsPerMatch'] = data['Wkts'] / data['Mat']
-
-# Calculate career span in years (longevity)
-def get_span_years(span):
-    try:
-        start, end = span.split('-')
-        return int(end) - int(start) + 1
-    except:
-        return np.nan
-data['SpanYears'] = data['Span'].apply(get_span_years)
-
-# --- Era Normalization ---
-# Assign each bowler to an era based on career midpoint, then adjust average/economy by era mean
-era_bins = [0, 1919, 1929, 1939, 1949, 1959, 1969, 1979, 1989, 1999, 2009, 2019, 2100]
-era_labels = [
-    'pre1920', '1920s', '1930s', '1940s', '1950s', '1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'
-]
-era_avg = {
-    'pre1920': {'Avg': 25, 'Econ': 2.63},
-    '1920s':   {'Avg': 32, 'Econ': 2.63},
-    '1930s':   {'Avg': 35, 'Econ': 2.63},
-    '1940s':   {'Avg': 32, 'Econ': 2.28},
-    '1950s':   {'Avg': 28.5, 'Econ': 2.28},
-    '1960s':   {'Avg': 32, 'Econ': 2.49},
-    '1970s':   {'Avg': 32, 'Econ': 2.66},
-    '1980s':   {'Avg': 32, 'Econ': 2.85},
-    '1990s':   {'Avg': 31.5, 'Econ': 2.83},
-    '2000s':   {'Avg': 34.1, 'Econ': 3.08},
-    '2010s':   {'Avg': 33.85, 'Econ': 3.15},
-    '2020s':   {'Avg': 33.85, 'Econ': 3.22},
-}
-def get_era(span):
-    try:
-        start, end = span.split('-')
-        mid = (int(start) + int(end)) // 2
-        for i in range(len(era_bins)-1):
-            if era_bins[i] <= mid < era_bins[i+1]:
-                return era_labels[i]
-        return '2010s'
-    except:
-        return '2010s'
-data['Era'] = data['Span'].apply(get_era)
-data['AdjAvg'] = data.apply(lambda x: x['Avg'] / era_avg[x['Era']]['Avg'] if pd.notnull(x['Avg']) else np.nan, axis=1)
-data['AdjEcon'] = data.apply(lambda x: x['Econ'] / era_avg[x['Era']]['Econ'] if pd.notnull(x['Econ']) else np.nan, axis=1)
-
-# --- Parameters for Scoring ---
-# These are the metrics used for ranking
-parameters = [
-    'AdjAvg',        # Adjusted bowling average (lower better)
-    'SR',            # Strike rate (lower better)
-    'AdjEcon',       # Adjusted economy rate (lower better)
-    'WktsPerMatch',  # Wickets per match (higher better)
-    '5w',            # 5-wicket hauls (higher better)
-    '10w',           # 10-wicket hauls (higher better)
-    'SpanYears'      # Career span in years (higher better)
-]
-
-# --- Normalization ---
-# Standardize all metrics (z-score), then invert lower-is-better so higher is always better
-lower_better = ['AdjAvg', 'SR', 'AdjEcon']
-higher_better = ['WktsPerMatch', '5w', '10w', 'SpanYears']
-from sklearn.preprocessing import StandardScaler
-scaler = StandardScaler()
-data_z = pd.DataFrame(scaler.fit_transform(data[parameters]), columns=parameters)
-for col in lower_better:
-    data_z[col] = -data_z[col]
-
-# --- Define Ideal Bowler (center) as mean of top 10% for each metric ---
-# This creates a composite 'ideal' bowler for comparison
-def top10_mean(col):
-    n = max(1, int(0.1 * len(data_z)))
-    return data_z[col].sort_values(ascending=False).head(n).mean()
-center = np.array([top10_mean(col) for col in data_z.columns])
-
-# --- Euclidean Distance from Ideal ---
-# The lower the distance, the closer the bowler is to the ideal
-def euclidean(row):
-    return np.linalg.norm(row.values - center)
-data['score'] = data_z.apply(euclidean, axis=1)
-
-# Lower score = closer to ideal bowler
-best_bowlers = data.sort_values('score')
 
 
-# --- K-MEANS CLUSTERING OF BOWLERS ---
-# We use k-means to find natural groupings of bowlers based on their normalized metrics.
-# Number of clusters = int(sqrt(N)), where N is the number of bowlers (minimum 2).
-from sklearn.cluster import KMeans
-N = len(data_z)
-n_clusters = max(2, int(np.sqrt(N)))
-kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
-data['cluster'] = kmeans.fit_predict(data_z)
 
-# Print cluster assignments for each bowler (top 10 by score)
-print("\nTop 10 bowlers and their cluster assignments:")
-print(best_bowlers[['Player', 'score', 'cluster'] + parameters].head(10))
 
-# Print cluster centers (in normalized metric space)
-print(f"\nK-means cluster centers (z-score space, columns: {parameters}):")
-for i, center in enumerate(kmeans.cluster_centers_):
-    print(f"Cluster {i}: {center}")
+
