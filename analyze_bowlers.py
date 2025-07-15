@@ -1,3 +1,117 @@
+#top 10 bowlers
+'''
+Top 10 bowlers and their cluster assignments:
+                Player     score  cluster    AdjAvg     SR   AdjEcon  WktsPerMatch  5w  10w  SpanYears
+12  Sir RJ Hadlee (NZ)  1.721272        2  0.696562  50.85  0.922807      5.011628  36    9         18
+1       SK Warne (AUS)  2.237841        2  0.745161  57.49  0.860390      4.882759  37   10         16
+7       R Ashwin (IND)  2.378312        2  0.709010  50.73  0.898413      5.066038  37    8         14
+11   HMRKB Herath (SL)  2.775975        2  0.823167  60.03  0.909091      4.655914  34    9         20
+23    Imran Khan (PAK)  3.075138        2  0.712812  53.75  0.891228      4.113636  23    6         22
+5     GD McGrath (AUS)  3.152815        0  0.634604  51.95  0.808442      4.540323  29    3         15
+3       A Kumble (IND)  3.371283        2  0.869501  65.99  0.873377      4.689394  35    8         19
+15   Wasim Akram (PAK)  3.425721        2  0.749841  54.65  0.915194      3.980769  25    5         18
+9        DW Steyn (SA)  3.444567        2  0.677991  42.38  1.028571      4.720430  26    5         16
+21    MD Marshall (WI)  3.577987        0  0.654375  46.76  0.940351      4.641975  22    4         14
+'''
+#clusters
+'''
+Cluster 0 (14 bowlers):
+  GD McGrath (AUS)
+  SM Pollock (SA)
+  CEL Ambrose (WI)
+  MD Marshall (WI)
+  K Rabada (SA)
+  AA Donald (SA)
+  RA Jadeja (IND)
+  PJ Cummins (AUS)
+  JR Hazlewood (AUS)
+  J Garner (WI)
+  MA Holding (WI)
+  VD Philander (SA)
+  JJ Bumrah (IND)
+  CV Grimmett (AUS)
+
+Cluster 1 (39 bowlers):
+  MA Starc (AUS)
+  M Ntini (SA)
+  RGD Willis (ENG)
+  TA Boult (NZ)
+  MG Johnson (AUS)
+  Z Khan (IND)
+  B Lee (AUS)
+  M Morkel (SA)
+  FS Trueman (ENG)
+  CJ McDermott (AUS)
+  KAJ Roach (WI)
+  Danish Kaneria (PAK)
+  N Wagner (NZ)
+  JN Gillespie (AUS)
+  GP Swann (ENG)
+  JB Statham (ENG)
+  MJ Hoggard (ENG)
+  GD McKenzie (AUS)
+  Yasir Shah (PAK)
+  BS Chandrasekhar (IND)
+  Taijul Islam (BAN)
+  AV Bedser (ENG)
+  J Srinath (IND)
+  AR Caddick (ENG)
+  CS Martin (NZ)
+  Mohammed Shami (IND)
+  D Gough (ENG)
+  RR Lindwall (AUS)
+  SJ Harmison (ENG/ICC)
+  CL Cairns (NZ)
+  MG Hughes (AUS)
+  SCG MacGill (AUS)
+  Saqlain Mushtaq (PAK)
+  Mehidy Hasan Miraz (BAN)
+  MM Ali (ENG)
+  KA Maharaj (SA)
+  AME Roberts (WI)
+  JA Snow (ENG)
+  JR Thomson (AUS)
+
+Cluster 2 (16 bowlers):
+  SK Warne (AUS)
+  JM Anderson (ENG)
+  A Kumble (IND)
+  SCJ Broad (ENG)
+  NM Lyon (AUS)
+  R Ashwin (IND)
+  CA Walsh (WI)
+  DW Steyn (SA)
+  HMRKB Herath (SL)
+  Sir RJ Hadlee (NZ)
+  Harbhajan Singh (IND)
+  Wasim Akram (PAK)
+  IT Botham (ENG)
+  Waqar Younis (PAK)
+  Imran Khan (PAK)
+  DK Lillee (AUS)
+
+Cluster 3 (17 bowlers):
+  N Kapil Dev (IND)
+  TG Southee (NZ)
+  DL Vettori (ICC/NZ)
+  WPUJC Vaas (SL)
+  I Sharma (IND)
+  LR Gibbs (WI)
+  DL Underwood (ENG)
+  JH Kallis (ICC/SA)
+  BS Bedi (IND)
+  R Benaud (AUS)
+  Shakib Al Hasan (BAN)
+  Abdul Qadir (PAK)
+  GS Sobers (WI)
+  A Flintoff (ENG/ICC)
+  BA Stokes (ENG)
+  PM Siddle (AUS)
+  HH Streak (ZIM)
+
+Cluster 4 (1 bowlers):
+  M Muralidaran (ICC/SL)
+'''
 
 # --- CSV DATA ---
 csv_data = """Player,Span,Mat,Inns,Balls,Overs,Mdns,Runs,Wkts,BBI,Ave,Econ,SR,4,5,10
@@ -194,9 +308,32 @@ def euclidean(row):
     return np.linalg.norm(row.values - center)
 data['score'] = data_z.apply(euclidean, axis=1)
 
-# --- K-MEANS CLUSTERING OF BOWLERS ---
-N = len(data_z)
-n_clusters = max(2, int(np.sqrt(N)))
+
+
+# --- K-MEANS CLUSTERING OF BOWLERS (Elbow Method) ---
+import matplotlib.pyplot as plt
+
+# Elbow method to find optimal number of clusters
+inertia = []
+K_range = range(1, 11)
+for k in K_range:
+    km = KMeans(n_clusters=k, random_state=42, n_init=10)
+    km.fit(data_z)
+    inertia.append(km.inertia_)
+
+# Plot the elbow curve
+plt.figure(figsize=(7, 4))
+plt.plot(K_range, inertia, marker='o')
+plt.xlabel('Number of clusters (k)')
+plt.ylabel('Inertia (Sum of Squared Distances)')
+plt.title('Elbow Method For Optimal k')
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+# Choose optimal k (elbow point) - user can visually inspect the plot
+# For automation, you can set n_clusters to the value where the elbow occurs, or prompt the user
+n_clusters = int(input('Enter the optimal number of clusters as seen from the elbow plot: '))
 kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
 data['cluster'] = kmeans.fit_predict(data_z)
 
@@ -215,6 +352,12 @@ print("\n--- Bowlers by Cluster ---")
 for clus in sorted(data['cluster'].unique()):
     print(f"\nCluster {clus} ({len(data[data['cluster'] == clus])} bowlers):")
 
+print("\n--- Bowlers by Cluster ---")
+for clus in sorted(data['cluster'].unique()):
+    print(f"\nCluster {clus} ({len(data[data['cluster'] == clus])} bowlers):")
+    cluster_bowlers = data[data['cluster'] == clus]
+    for player in cluster_bowlers['Player']:
+        print(f"  {player}")
 
 
 
@@ -251,6 +394,10 @@ for clus in sorted(data['cluster'].unique()):
 
 # --- Feature Engineering ---
 # Calculate wickets per match (strike power)
+
+
+
+
 
 
 
